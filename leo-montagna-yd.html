@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deep Dive Analysis — Leo Montagna · 2025–26 Year to Date</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #14213D;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #14213D;
+    border-bottom: 3px solid #E2603D;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+  }
+  h1.cover { font-size: 26pt; border-bottom: 4px solid #E2603D; margin-top: 0; }
+  h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #2B6F6C;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-left: 4px solid #2B6F6C;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #14213D;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  p { margin: 0 0 10px 0; }
+  ul, ol { margin: 8px 0 12px 0; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px 0;
+    font-size: 10.5pt;
+  }
+  th {
+    background: #14213D;
+    color: #fff;
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f6f2e9; }
+  .callout {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-red {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-yellow {
+    background: #fffbea;
+    border-left: 4px solid #e0a800;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .badge-green {
+    display: inline-block;
+    background: #2B6F6C;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-red {
+    display: inline-block;
+    background: #E2603D;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-yellow {
+    display: inline-block;
+    background: #e0a800;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  hr { border: none; border-top: 1px solid #ddd; margin: 32px 0; }
+  .cover-block {
+    background: #14213D;
+    color: #fff;
+    padding: 40px 40px 32px;
+    margin: -40px -32px 40px;
+  }
+  .cover-block h1 { color: #fff; border-bottom: 3px solid #E2603D; }
+  .cover-block .sub { color: rgba(246,242,233,0.75); font-size: 11pt; margin-top: 6px; }
+  .cover-block .meta-row { margin-top: 20px; font-size: 9.5pt; color: rgba(246,242,233,0.55); }
+  .issue-item {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+  .action-item {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+  .subject-header {
+    background: #14213D;
+    color: #fff;
+    padding: 10px 16px;
+    margin: 28px 0 0 0;
+    font-size: 12pt;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+  }
+  .subject-sub {
+    background: #f0f0f0;
+    padding: 6px 16px;
+    font-size: 9.5pt;
+    color: #555;
+    margin: 0 0 14px 0;
+    border-left: 4px solid #14213D;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover-block">
+  <h1 class="cover">Academics Deep Dive — Leo Montagna</h1>
+  <div class="sub">2025–26 School Year to Date</div>
+  <div class="meta-row">Prepared by: Campus DRI &nbsp;·&nbsp; Analysis Date: 2026</div>
+</div>
+
+<!-- KEY TAKEAWAYS -->
+<h1>Key Takeaways &amp; Recommendations</h1>
+
+<div class="callout-yellow">
+  <strong>Efficiency and XP Gains:</strong> Leo is currently averaging ~80 minutes per day on academics, which is below the required target. In addition, approximately 50% of this time is unproductive due to distractions, rushing, or skipping explanations. To reach XP goals, Leo must increase total time on task while improving focus and engagement so that more academic minutes are productive.
+</div>
+
+<div class="callout-yellow">
+  <strong>Path to Get Back on Track:</strong> To maximize learning, Leo will need coaching support to build stronger learning habits — reading carefully before answering, following sequential lesson plans, and maintaining focus without quitting or guessing. This shift will be especially emphasized in AlphaMath, Lalilo, and ClearFluency. In ClearFluency, Leo has been assigned a placement adjustment test to recalibrate their library; in Math, they have been transitioned to Zearn to ensure skills are built in the correct sequence and avoid skipped concepts.
+</div>
+
+<div class="callout-red">
+  <strong>Math Fluency as a Priority:</strong> Leo's accuracy in Fast Math remains low, even on single-digit addition (~60%), and frequent quitting limits progress. Building fluency is essential to support success in Math. Leo must complete at least 10 minutes of Fast Math daily. Stronger fluency in basic operations will boost confidence, improve efficiency, and allow Leo to keep pace with grade-level content.
+</div>
+
+<hr>
+
+<!-- ACADEMIC SNAPSHOT -->
+<h1>Academic Snapshot</h1>
+
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Age Grade</th>
+    <th>Highest Mastered Grade</th>
+    <th>MAP Growth × Fall-to-Fall</th>
+    <th>XP / School Day (YTD)</th>
+    <th>Min to Earn 1 XP (YTD)</th>
+  </tr>
+  <tr>
+    <td><strong>Math</strong></td>
+    <td>2</td>
+    <td>1</td>
+    <td>0.07</td>
+    <td>9</td>
+    <td>3.8</td>
+  </tr>
+  <tr>
+    <td><strong>Reading</strong></td>
+    <td>2</td>
+    <td>1</td>
+    <td>0.44</td>
+    <td>1</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td><strong>Language</strong></td>
+    <td>2</td>
+    <td>1</td>
+    <td>—</td>
+    <td>12</td>
+    <td>1.7</td>
+  </tr>
+</table>
+
+<div class="callout-red">
+  <strong>Reading efficiency is critically low.</strong> At 20 minutes per XP, Leo is spending 20× more time than expected per unit of learning in Reading. This is the highest-priority area for intervention.
+</div>
+
+<hr>
+
+<!-- DEEP DIVE -->
+<h1>Deep Dive by Subject</h1>
+
+<!-- READING -->
+<div class="subject-header">Reading</div>
+<div class="subject-sub">Platform: ClearFluency &nbsp;·&nbsp; Average: 20 min/day &nbsp;·&nbsp; ~80% unproductive</div>
+
+<p>Leo averages 20 minutes per school day in ClearFluency; however, approximately 80% of this time is unproductive due to ineffective usage patterns. Their fluency is currently at the minimum threshold for engaging with 2nd-grade content.</p>
+
+<h3>Why Leo is not learning 2×</h3>
+<div class="issue-item">
+  <strong>Inconsistent engagement:</strong> Leo used ClearFluency on only 9 of the last 15 school days. To remain on track for XP goals, Leo must master at least 2 stories per day.
+</div>
+<div class="issue-item">
+  <strong>Rushing through comprehension quizzes:</strong> Quizzes are often completed in ~1 minute each — insufficient time to read questions thoroughly, check answer options, and return to the passage for evidence. As a result, 50% of quizzes had zero correct answers.
+</div>
+<div class="issue-item">
+  <strong>Fluency at minimum threshold:</strong> Leo's fluency is at the floor for 2nd-grade content. Recordings also suggest a possible rhotacism (substitution of the "r" sound with "w").
+</div>
+
+<h3>Going Forward</h3>
+<div class="action-item">
+  <strong>Placement adjustment test assigned:</strong> Leo has been assigned a ClearFluency placement adjustment test to diagnose gaps in phonics, phonemic awareness, decoding, and comprehension, and to recalibrate their library to the correct difficulty level. Identified gaps will be addressed through a custom plan in Lalilo and ANTON.
+</div>
+<div class="action-item">
+  <strong>Microphone settings adjustment:</strong> Leo's microphone settings will be adjusted to slightly reduce pronunciation strictness. This will support progress despite a mild speech impediment without bypassing proper reading requirements.
+</div>
+<div class="action-item">
+  <strong>Coaching recommended:</strong> Academic coaching support in ClearFluency is recommended to address Leo's tendency to rush through comprehension quizzes and to strengthen careful reading habits.
+</div>
+
+<hr>
+
+<!-- MATH -->
+<div class="subject-header">Math</div>
+<div class="subject-sub">Platform: Synthesis Tutor → Zearn &nbsp;·&nbsp; Average: 34 min/day &nbsp;·&nbsp; ~60% unproductive</div>
+
+<p>Leo averages 34 minutes per school day in Synthesis Tutor; however, approximately 60% of this time is unproductive. Leo has worked through addition, subtraction, and place value up to fractions, multiplication, and division over the last couple of months.</p>
+
+<h3>Why Leo is not learning 2×</h3>
+<div class="issue-item">
+  <strong>Out-of-order lesson navigation:</strong> Leo did not follow the recommended lesson order in Synthesis Tutor, leading to engagement with concepts above their current skill level. Progress has been lower than expected, and time spent has not consistently translated into XP.
+</div>
+<div class="issue-item">
+  <strong>Calculator use:</strong> Leo used a calculator to solve multiplication questions in Zearn, bypassing the skill-building the platform is designed to develop.
+</div>
+
+<h3>Going Forward</h3>
+<div class="action-item">
+  <strong>Transitioned to Zearn:</strong> Leo has been moved to Zearn to ensure skills are built sequentially. This will allow Leo to engage at the appropriate level and demonstrate mastery before advancing.
+</div>
+<div class="action-item">
+  <strong>Structured pathway:</strong> Leo will follow a sequential learning pathway to avoid skipping ahead to concepts that require foundational skills not yet in place.
+</div>
+
+<hr>
+
+<!-- FAST MATH -->
+<div class="subject-header">Fast Math</div>
+<div class="subject-sub">Current: 3 XP/day &nbsp;·&nbsp; Target: 10 XP/day &nbsp;·&nbsp; Accuracy: ~60% on single-digit addition</div>
+
+<p>Leo is currently earning significantly less XP per day than expected in Fast Math (3 XP/day vs. a goal of 10). Accuracy and efficiency are well below expectations, limiting fluency development.</p>
+
+<h3>Why Leo is not learning 2×</h3>
+<div class="issue-item">
+  <strong>Low accuracy:</strong> Leo's accuracy remains low even on single-digit addition (~60%).
+</div>
+<div class="issue-item">
+  <strong>Quitting assessments:</strong> Leo has at least 3 assessments with a 0 speed score, and multiple more with a speed score of 1 or 2 — typically indicating minimal effort or quitting. Leo also frequently quits assessments halfway through.
+</div>
+
+<h3>Going Forward</h3>
+<div class="action-item">
+  <strong>App coaching sessions recommended:</strong> Coaching sessions in Fast Math are recommended to help Leo learn how to properly use the program and build productive habits. Emphasis on completing assessments fully and maintaining focus, with direct attention to the pattern of quitting or disengaging.
+</div>
+<div class="action-item">
+  <strong>Daily minimum:</strong> Leo should complete at least 10 minutes of focused practice daily in Fast Math to build fluency and work toward earning 10 XP per day.
+</div>
+
+<hr>
+
+<!-- LANGUAGE -->
+<div class="subject-header">Language</div>
+<div class="subject-sub">Platform: Lalilo &nbsp;·&nbsp; Average: 20 min/day &nbsp;·&nbsp; Target: 25 min/day &nbsp;·&nbsp; ~30% unproductive</div>
+
+<p>Leo averages 20 minutes per school day in Lalilo — below the 25-minute daily target — with approximately 30% of that time unproductive due to distraction and ineffective usage patterns.</p>
+
+<h3>Why Leo is not learning 2×</h3>
+<div class="issue-item">
+  <strong>Below time target:</strong> Leo is putting in 20% less time than required (20 min vs. 25 min target).
+</div>
+<div class="issue-item">
+  <strong>Closing or minimizing the app:</strong> Leo frequently minimizes or closes the app, causing idle time and lost progress. For example, accidentally closing a lesson caused 2.5 minutes of downtime — approximately 10% of active time wasted in that session.
+</div>
+<div class="issue-item">
+  <strong>Guessing before reading:</strong> Leo guesses answers before reading the question and is distracted by talking while completing quizzes.
+</div>
+<div class="issue-item">
+  <strong>Navigating away mid-session:</strong> Leo leaves lessons mid-session and spends time talking instead of focusing, further reducing productive learning time.
+</div>
+
+<h3>Going Forward</h3>
+<div class="action-item">
+  <strong>Increase daily time:</strong> Leo needs to consistently reach 25 minutes per school day in Lalilo. With consistent time input and by eliminating distracted learning, Leo will reach their 2× XP goals.
+</div>
+<div class="action-item">
+  <strong>Coaching recommended:</strong> Academic coaching while using Lalilo is recommended to reduce the anti-patterns of idling, distraction, and rushing.
+</div>
+
+<hr>
+
+<!-- ACTION PLAN -->
+<h1>Action Plan</h1>
+
+<table>
+  <tr><th>Area</th><th>Action</th><th>Owner</th></tr>
+  <tr>
+    <td><strong>Reading</strong></td>
+    <td>Administer ClearFluency placement adjustment test; adjust microphone sensitivity; schedule coaching session for comprehension quiz habits</td>
+    <td>Campus DRI + Guide</td>
+  </tr>
+  <tr>
+    <td><strong>Math</strong></td>
+    <td>Confirm Leo is fully transitioned to Zearn and following sequential lesson order; remove calculator access</td>
+    <td>Campus DRI</td>
+  </tr>
+  <tr>
+    <td><strong>Fast Math</strong></td>
+    <td>Schedule at least 2–3 supervised Fast Math sessions; enforce 10-minute daily minimum; monitor speed scores for quitting pattern</td>
+    <td>Guide + Campus DRI</td>
+  </tr>
+  <tr>
+    <td><strong>Language</strong></td>
+    <td>Coach Leo to keep Lalilo open and reach 25 min/day; address guessing and distraction habits in session</td>
+    <td>Guide</td>
+  </tr>
+  <tr>
+    <td><strong>Overall</strong></td>
+    <td>Review Leo's data in 2 weeks — if efficiency is still below 60% across subjects, escalate to Subject DRI and flag in weekly report</td>
+    <td>Campus DRI</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>2-week check-in target:</strong> XP/day in Reading above 3 · Fast Math daily completion rate above 80% · Lalilo daily time consistently at 25 min.
+</div>
+
+</body>
+</html>
