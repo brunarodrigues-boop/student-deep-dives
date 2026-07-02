@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deep Dive Analysis — Alita Sanborn · Math</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #14213D;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #14213D;
+    border-bottom: 3px solid #E2603D;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+  }
+  h1.cover { font-size: 26pt; border-bottom: 4px solid #E2603D; margin-top: 0; }
+  h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #2B6F6C;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-left: 4px solid #2B6F6C;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #14213D;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  p { margin: 0 0 10px 0; }
+  ul, ol { margin: 8px 0 12px 0; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px 0;
+    font-size: 10.5pt;
+  }
+  th {
+    background: #14213D;
+    color: #fff;
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f6f2e9; }
+  .callout {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-red {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-yellow {
+    background: #fffbea;
+    border-left: 4px solid #e0a800;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .badge-green {
+    display: inline-block;
+    background: #2B6F6C;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-red {
+    display: inline-block;
+    background: #E2603D;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-yellow {
+    display: inline-block;
+    background: #e0a800;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  hr { border: none; border-top: 1px solid #ddd; margin: 32px 0; }
+  .cover-block {
+    background: #14213D;
+    color: #fff;
+    padding: 40px 40px 32px;
+    margin: -40px -32px 40px;
+  }
+  .cover-block h1 { color: #fff; border-bottom: 3px solid #E2603D; }
+  .cover-block .sub { color: rgba(246,242,233,0.75); font-size: 11pt; margin-top: 6px; }
+  .cover-block .meta-row { margin-top: 20px; font-size: 9.5pt; color: rgba(246,242,233,0.55); }
+  .antipattern-item {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+  .coaching-item {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover-block">
+  <h1 class="cover">Student Deep Dive — Alita Sanborn</h1>
+  <div class="sub">Math · Weekly Performance Analysis</div>
+  <div class="meta-row">
+    alita.sanborn@alpha.school &nbsp;·&nbsp; Analysis Date: July 2026 &nbsp;·&nbsp; Prepared by: Campus DRI
+  </div>
+</div>
+
+<!-- AT A GLANCE -->
+<h1>At a Glance</h1>
+
+<table>
+  <tr><th>Metric</th><th>Result</th><th>Status</th></tr>
+  <tr>
+    <td>Total XP for the Week</td>
+    <td>130 XP</td>
+    <td><span class="badge-green">Met Target</span></td>
+  </tr>
+  <tr>
+    <td>Total Minutes Spent for the Week</td>
+    <td>249 min</td>
+    <td><span class="badge-green">Met Target</span></td>
+  </tr>
+  <tr>
+    <td>XP / Time Efficiency</td>
+    <td>52%</td>
+    <td><span class="badge-yellow">Concern</span></td>
+  </tr>
+  <tr>
+    <td>Overall Weekly Assessment</td>
+    <td colspan="2"><span class="badge-red">Significant Anti-Pattern Activity Detected</span></td>
+  </tr>
+</table>
+
+<div class="callout-yellow">
+  <strong>Important context:</strong> While Alita met both her XP and time targets this week, efficiency is low at 52%. This means a significant portion of her time was wasted due to repeated anti-patterns rather than productive learning. Meeting targets does not mean the time was well spent.
+</div>
+
+<hr>
+
+<!-- ANTI-PATTERNS -->
+<h1>Anti-Patterns Identified</h1>
+<p>The following recurring behavioral patterns were observed this week and are impacting both learning quality and time efficiency.</p>
+
+<div class="antipattern-item">
+  <strong>1. Not staying focused on instructional content</strong><br>
+  Alita repeatedly disengaged from lessons, leading to repeated errors and getting stuck on content she had not absorbed.
+</div>
+
+<div class="antipattern-item">
+  <strong>2. Rushing or skipping through instructional videos</strong><br>
+  Videos were skipped rather than watched fully. This is a primary driver of downstream errors — she is attempting quizzes without completing the instruction they are based on.
+</div>
+
+<div class="antipattern-item">
+  <strong>3. Rushing through questions without careful reading</strong><br>
+  Answers submitted without thinking through the question, without double-checking, and without using pen and paper for multi-step problems. This caused careless errors and wasted time looping back.
+</div>
+
+<div class="antipattern-item">
+  <strong>4. Not engaging with correction lessons (boosts)</strong><br>
+  When correction lessons were assigned after mistakes, Alita did not engage with them meaningfully. This means she repeated the same errors without improvement.
+</div>
+
+<div class="antipattern-item">
+  <strong>5. Idling, off-task behaviour, and leaving the workspace</strong><br>
+  Frequent pauses, conversations with others, leaving the screen, and sidetracking with unrelated activities. This accounts for a significant share of her logged time this week.
+</div>
+
+<div class="antipattern-item">
+  <strong>6. Exiting the app before finishing lessons</strong><br>
+  Lessons were exited mid-session, causing progress to be lost and the same content to be repeated on return — a direct time and XP drain.
+</div>
+
+<hr>
+
+<!-- DETAILED OBSERVATIONS -->
+<h1>Detailed Observations</h1>
+<p>The following were documented with recording evidence this week. Evidence references correspond to timestamped recordings.</p>
+
+<h2>Focus &amp; Attention</h2>
+<ul>
+  <li>Did not stay focused on instructional content, leading to repeated errors and getting stuck. <em>(Evidence: 1, 2, 3, 4, 5)</em></li>
+  <li>Did not stay focused on correction lessons, leading to the same mistakes being repeated. <em>(Evidence: 1)</em></li>
+  <li>Idled in the app, talked to others, left her workspace, and frequently looked away from the screen. <em>(Evidence: 1–13)</em></li>
+</ul>
+
+<h2>Video &amp; Instructional Engagement</h2>
+<ul>
+  <li>Skipped through instructional videos instead of watching them fully. <em>(Evidence: 1, 2, 3, 4, 5, 6)</em></li>
+</ul>
+
+<h2>Question Attempts &amp; Accuracy</h2>
+<ul>
+  <li>Rushed through questions — answered without carefully thinking, did not count or solve carefully, did not double-check before submitting. This led to struggles, wasted time, repeated mistakes, and careless errors. <em>(Evidence: 1–9)</em></li>
+</ul>
+
+<h2>App Behaviour</h2>
+<ul>
+  <li>Repeatedly closed the app before finishing current lessons, causing wasted time as parts had to be repeated on return. <em>(Evidence: 1, 2)</em></li>
+</ul>
+
+<div class="callout-red">
+  <strong>Note:</strong> Alita spent significant time completing Number Gym activities this week due to the above anti-patterns. The time logged does not reflect the volume of productive learning that should be expected at her placement level.
+</div>
+
+<hr>
+
+<!-- ROOT CAUSE -->
+<h1>Root Cause Assessment</h1>
+
+<table>
+  <tr><th>Area</th><th>Observed Issue</th><th>Likely Root Cause</th></tr>
+  <tr>
+    <td>Focus</td>
+    <td>Frequent off-task behaviour, leaving workspace</td>
+    <td>Motivation and environment — guide intervention needed</td>
+  </tr>
+  <tr>
+    <td>Video engagement</td>
+    <td>Skipping instructional content</td>
+    <td>Seeking shortcuts; does not understand the connection between video and quiz performance</td>
+  </tr>
+  <tr>
+    <td>Question accuracy</td>
+    <td>Rushing, careless errors</td>
+    <td>Insufficient patience; habit of guessing rather than working through problems</td>
+  </tr>
+  <tr>
+    <td>Correction lessons</td>
+    <td>Not engaging with boosts</td>
+    <td>Does not understand the purpose of correction lessons — treats them as obstacles</td>
+  </tr>
+  <tr>
+    <td>App exits</td>
+    <td>Leaving before lessons complete</td>
+    <td>Impatience; may not understand how XP and progress are tracked</td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- COACHING RECOMMENDATIONS -->
+<h1>Coaching Recommendations for Alita</h1>
+<p>The following coaching points should be delivered to Alita directly by her guide this week. Each point maps to a specific anti-pattern above.</p>
+
+<div class="coaching-item">
+  <strong>1. Focus and listen during lessons</strong><br>
+  Pay close attention and listen carefully to the lessons so you don't make a lot of mistakes or get stuck. Watch the whole videos without skipping and take your time to learn and understand the content — these will help you do better on the Tower of Power quizzes.
+</div>
+
+<div class="coaching-item">
+  <strong>2. Slow down and read questions carefully</strong><br>
+  Take your time — don't rush. Read the questions carefully and make sure you understand what they are asking. Remember and use what you've learned from the lessons. Count and solve carefully, use your pen and paper to work step by step so you don't miss anything. Double-check your answers before you submit.
+</div>
+
+<div class="coaching-item">
+  <strong>3. Look at diagrams and check your work</strong><br>
+  Look closely at pictures or diagrams and match them with what the question says. Check numbers and signs carefully to make sure your solutions and answers are correct.
+</div>
+
+<div class="coaching-item">
+  <strong>4. Use correction lessons to get better</strong><br>
+  When you make a mistake, focus on the lesson that shows the correction — this will help you get it right next time. These lessons are there to help you, not slow you down.
+</div>
+
+<div class="coaching-item">
+  <strong>5. Stay focused and avoid distractions</strong><br>
+  Stay active and keep working in the app without long breaks or pauses. Don't leave your workspace or talk to other people while studying. Keep your eyes on the screen and use your time to finish and master your assigned lessons.
+</div>
+
+<div class="coaching-item">
+  <strong>6. Finish lessons before closing</strong><br>
+  Finish your lessons before leaving the app so you can earn XP and keep moving forward. If you exit early, you may have to repeat parts when you come back — this wastes time and slows your progress.
+</div>
+
+<hr>
+
+<!-- NEXT STEPS -->
+<h1>Action Plan</h1>
+
+<table>
+  <tr><th>Who</th><th>Action</th><th>By When</th></tr>
+  <tr>
+    <td><strong>Guide</strong></td>
+    <td>Deliver coaching points 1–6 to Alita directly. Emphasise the connection between watching videos fully and quiz performance.</td>
+    <td>This week</td>
+  </tr>
+  <tr>
+    <td><strong>Guide</strong></td>
+    <td>Observe Alita during at least one learning session. Confirm she is watching videos, not skipping, and staying at her workspace.</td>
+    <td>This week</td>
+  </tr>
+  <tr>
+    <td><strong>Campus DRI</strong></td>
+    <td>Review next week's recordings for the same anti-patterns. If any 3+ persist, escalate to the academic team.</td>
+    <td>End of next week</td>
+  </tr>
+  <tr>
+    <td><strong>Campus DRI</strong></td>
+    <td>Track XP efficiency next week — target above 65% to confirm improvement.</td>
+    <td>End of next week</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>Follow-up trigger:</strong> If Alita's XP efficiency remains below 60% next week, or if 3+ anti-patterns are observed again, escalate to the Subject DRI and flag in the weekly report.
+</div>
+
+</body>
+</html>
