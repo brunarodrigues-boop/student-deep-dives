@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deep Dive Template — [STUDENT NAME] · [SUBJECT]</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #14213D;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #14213D;
+    border-bottom: 3px solid #E2603D;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+  }
+  h1.cover { font-size: 26pt; border-bottom: 4px solid #E2603D; margin-top: 0; }
+  h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #2B6F6C;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-left: 4px solid #2B6F6C;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #14213D;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  p { margin: 0 0 10px 0; }
+  ul, ol { margin: 8px 0 12px 0; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px 0;
+    font-size: 10.5pt;
+  }
+  th {
+    background: #14213D;
+    color: #fff;
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f6f2e9; }
+  .callout {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-red {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .callout-yellow {
+    background: #fffbea;
+    border-left: 4px solid #e0a800;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  .badge-green {
+    display: inline-block;
+    background: #2B6F6C;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-red {
+    display: inline-block;
+    background: #E2603D;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-yellow {
+    display: inline-block;
+    background: #e0a800;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  hr { border: none; border-top: 1px solid #ddd; margin: 32px 0; }
+  .cover-block {
+    background: #14213D;
+    color: #fff;
+    padding: 40px 40px 32px;
+    margin: -40px -32px 40px;
+  }
+  .cover-block h1 { color: #fff; border-bottom: 3px solid #E2603D; }
+  .cover-block .sub { color: rgba(246,242,233,0.75); font-size: 11pt; margin-top: 6px; }
+  .cover-block .meta-row { margin-top: 20px; font-size: 9.5pt; color: rgba(246,242,233,0.55); }
+  .antipattern-item {
+    background: #fdf1ed;
+    border-left: 4px solid #E2603D;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+  .coaching-item {
+    background: #e8f4f3;
+    border-left: 4px solid #2B6F6C;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 10pt;
+  }
+
+  /* TEMPLATE GUIDE — delete this block before sending */
+  .template-guide {
+    background: #fffbea;
+    border: 2px dashed #e0a800;
+    padding: 16px 20px;
+    margin: 0 0 32px 0;
+    font-size: 10pt;
+  }
+  .template-guide h3 {
+    color: #8a6200;
+    margin-top: 0;
+    font-size: 11pt;
+  }
+  .template-guide ol { margin: 8px 0 0 0; }
+  .template-guide li { margin-bottom: 4px; color: #555; }
+  .template-guide code {
+    background: #fff3cd;
+    border: 1px solid #e0a800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 9.5pt;
+    color: #8a6200;
+  }
+
+  /* PLACEHOLDER styling */
+  .ph {
+    background: #fff3cd;
+    border: 1px dashed #e0a800;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #8a6200;
+    font-style: italic;
+    font-size: 10pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TEMPLATE GUIDE — Delete this entire block before sending
+     ============================================================ -->
+<div class="template-guide">
+  <h3>📋 How to use this template</h3>
+  <ol>
+    <li>Replace every <code>[PLACEHOLDER]</code> with the student's actual data.</li>
+    <li>Choose the right badge for each metric: <code>badge-green</code> = Met Target · <code>badge-yellow</code> = Concern · <code>badge-red</code> = Critical</code></li>
+    <li>Add or remove <code>.antipattern-item</code> blocks to match how many anti-patterns you identified. Mirror the same number in the Coaching section.</li>
+    <li>Add or remove <code>&lt;h2&gt;</code> observation categories as needed. Include only categories relevant to this student.</li>
+    <li>Delete this yellow box before sharing.</li>
+  </ol>
+</div>
+
+<!-- COVER -->
+<div class="cover-block">
+  <h1 class="cover">Student Deep Dive — [STUDENT FULL NAME]</h1>
+  <div class="sub">[Subject] · [Weekly Performance Analysis / Year to Date / Month to Date]</div>
+  <div class="meta-row">
+    [student.email@alpha.school] &nbsp;·&nbsp; Analysis Date: [Month Year] &nbsp;·&nbsp; Prepared by: Campus DRI
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 1 · AT A GLANCE
+     ============================================================ -->
+<h1>At a Glance</h1>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Result</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Total XP for the Week</td>
+    <td>[e.g. 130 XP]</td>
+    <!-- Use badge-green / badge-yellow / badge-red -->
+    <td><span class="badge-green">Met Target</span></td>
+  </tr>
+  <tr>
+    <td>Total Minutes Spent for the Week</td>
+    <td>[e.g. 249 min]</td>
+    <td><span class="badge-green">Met Target</span></td>
+  </tr>
+  <tr>
+    <td>XP / Time Efficiency</td>
+    <td>[e.g. 52%]</td>
+    <!-- &gt;80% = green · 60–80% = yellow · &lt;60% = red -->
+    <td><span class="badge-yellow">Concern</span></td>
+  </tr>
+  <tr>
+    <td>Overall Weekly Assessment</td>
+    <!-- colspan="2" spans the last two columns -->
+    <td colspan="2"><span class="badge-red">[e.g. Significant Anti-Pattern Activity Detected]</span></td>
+  </tr>
+  <!-- Add more rows as needed -->
+</table>
+
+<!-- Context callout: explain the headline number in plain language -->
+<!-- Use callout (teal), callout-yellow, or callout-red depending on urgency -->
+<div class="callout-yellow">
+  <strong>Important context:</strong> [Explain the key tension — e.g. "While [STUDENT] met both targets this week, efficiency is low at [X]%. This means a significant portion of time was wasted due to repeated anti-patterns rather than productive learning. Meeting targets does not mean the time was well spent."]
+</div>
+
+<hr>
+
+<!-- ============================================================
+     SECTION 2 · ANTI-PATTERNS
+     Add or remove .antipattern-item blocks as needed.
+     ============================================================ -->
+<h1>Anti-Patterns Identified</h1>
+<p>The following recurring behavioral patterns were observed this week and are impacting both learning quality and time efficiency.</p>
+
+<div class="antipattern-item">
+  <strong>1. [Anti-pattern title — e.g. Not staying focused on instructional content]</strong><br>
+  [One or two sentences describing what was observed and its impact on learning.]
+</div>
+
+<div class="antipattern-item">
+  <strong>2. [Anti-pattern title]</strong><br>
+  [Description of the anti-pattern and its impact.]
+</div>
+
+<div class="antipattern-item">
+  <strong>3. [Anti-pattern title]</strong><br>
+  [Description of the anti-pattern and its impact.]
+</div>
+
+<!-- Copy and paste additional blocks as needed:
+<div class="antipattern-item">
+  <strong>4. [Anti-pattern title]</strong><br>
+  [Description.]
+</div>
+-->
+
+<hr>
+
+<!-- ============================================================
+     SECTION 3 · DETAILED OBSERVATIONS
+     Group by category. Remove categories that don't apply.
+     ============================================================ -->
+<h1>Detailed Observations</h1>
+<p>The following were documented with recording evidence this week. Evidence references correspond to timestamped recordings.</p>
+
+<h2>Focus &amp; Attention</h2>
+<ul>
+  <li>[Observation with evidence reference — e.g. "Did not stay focused on instructional content, leading to repeated errors." <em>(Evidence: 1, 2, 3)</em>]</li>
+  <li>[Add more observations under this category as needed.]</li>
+</ul>
+
+<h2>Video &amp; Instructional Engagement</h2>
+<ul>
+  <li>[e.g. "Skipped through instructional videos instead of watching them fully." <em>(Evidence: 1, 2, 3)</em>]</li>
+</ul>
+
+<h2>Question Attempts &amp; Accuracy</h2>
+<ul>
+  <li>[e.g. "Rushed through questions — answered without carefully reading, did not double-check before submitting." <em>(Evidence: 1–9)</em>]</li>
+</ul>
+
+<h2>App Behaviour</h2>
+<ul>
+  <li>[e.g. "Repeatedly closed the app before finishing lessons, causing wasted time as parts had to be repeated." <em>(Evidence: 1, 2)</em>]</li>
+</ul>
+
+<!-- Add more <h2> categories as needed — e.g. Fluency, Accuracy, Time on Task -->
+
+<!-- Optional red callout for a specific note or caveat -->
+<div class="callout-red">
+  <strong>Note:</strong> [Optional — add any important caveat about how to interpret the data, e.g. placement issues, external factors, context that changes the reading of the numbers.]
+</div>
+
+<hr>
+
+<!-- ============================================================
+     SECTION 4 · ROOT CAUSE
+     ============================================================ -->
+<h1>Root Cause Assessment</h1>
+
+<table>
+  <tr>
+    <th>Area</th>
+    <th>Observed Issue</th>
+    <th>Likely Root Cause</th>
+  </tr>
+  <tr>
+    <td>[e.g. Focus]</td>
+    <td>[e.g. Frequent off-task behaviour, leaving workspace]</td>
+    <td>[e.g. Motivation and environment — guide intervention needed]</td>
+  </tr>
+  <tr>
+    <td>[e.g. Video engagement]</td>
+    <td>[e.g. Skipping instructional content]</td>
+    <td>[e.g. Seeking shortcuts; does not understand the connection between video and quiz performance]</td>
+  </tr>
+  <tr>
+    <td>[Area]</td>
+    <td>[Observed issue]</td>
+    <td>[Root cause]</td>
+  </tr>
+  <!-- Add rows to match the anti-patterns above -->
+</table>
+
+<hr>
+
+<!-- ============================================================
+     SECTION 5 · COACHING RECOMMENDATIONS
+     One coaching-item per anti-pattern. Use student-facing language.
+     ============================================================ -->
+<h1>Coaching Recommendations for [STUDENT FIRST NAME]</h1>
+<p>The following coaching points should be delivered to [STUDENT FIRST NAME] directly by their guide this week. Each point maps to a specific anti-pattern above.</p>
+
+<div class="coaching-item">
+  <strong>1. [Coaching point title — matches Anti-Pattern 1]</strong><br>
+  [Write this in direct, student-facing language. Explain what the student should do differently and why it will help them. Keep it encouraging and specific.]
+</div>
+
+<div class="coaching-item">
+  <strong>2. [Coaching point title — matches Anti-Pattern 2]</strong><br>
+  [Student-facing language. Specific, actionable, encouraging.]
+</div>
+
+<div class="coaching-item">
+  <strong>3. [Coaching point title — matches Anti-Pattern 3]</strong><br>
+  [Student-facing language. Specific, actionable, encouraging.]
+</div>
+
+<!-- Copy and paste additional blocks as needed:
+<div class="coaching-item">
+  <strong>4. [Coaching point title]</strong><br>
+  [Description.]
+</div>
+-->
+
+<hr>
+
+<!-- ============================================================
+     SECTION 6 · ACTION PLAN
+     ============================================================ -->
+<h1>Action Plan</h1>
+
+<table>
+  <tr>
+    <th>Who</th>
+    <th>Action</th>
+    <th>By When</th>
+  </tr>
+  <tr>
+    <td><strong>Guide</strong></td>
+    <td>[e.g. Deliver coaching points 1–3 to [STUDENT] directly. Emphasise the connection between watching videos fully and quiz performance.]</td>
+    <td>This week</td>
+  </tr>
+  <tr>
+    <td><strong>Guide</strong></td>
+    <td>[e.g. Observe [STUDENT] during at least one learning session. Confirm they are watching videos, not skipping, and staying at their workspace.]</td>
+    <td>This week</td>
+  </tr>
+  <tr>
+    <td><strong>Campus DRI</strong></td>
+    <td>[e.g. Review next week's recordings for the same anti-patterns. If any 3+ persist, escalate to the academic team.]</td>
+    <td>End of next week</td>
+  </tr>
+  <tr>
+    <td><strong>Campus DRI</strong></td>
+    <td>[e.g. Track XP efficiency next week — target above 65% to confirm improvement.]</td>
+    <td>End of next week</td>
+  </tr>
+  <!-- Add rows as needed -->
+</table>
+
+<!-- Follow-up trigger: when to escalate if things don't improve -->
+<div class="callout">
+  <strong>Follow-up trigger:</strong> If [STUDENT]'s [metric — e.g. XP efficiency] remains below [threshold — e.g. 60%] next week, or if [condition — e.g. 3+ anti-patterns are observed again], escalate to the Subject DRI and flag in the weekly report.
+</div>
+
+</body>
+</html>
