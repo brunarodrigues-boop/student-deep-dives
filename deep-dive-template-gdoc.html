@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deep Dive Template — Google Docs Version</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #14213D;
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+  @media print { .how-to { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- HOW TO USE — delete before sharing -->
+<div class="how-to" style="background:#fffbea; border:2px dashed #e0a800; padding:16px 20px; margin-bottom:32px; font-size:10pt;">
+  <strong style="color:#8a6200; font-size:11pt;">How to turn this into a Google Doc template:</strong>
+  <ol style="margin:10px 0 0 0; padding-left:20px; color:#555;">
+    <li>Press <strong>Cmd+A</strong> (Mac) or <strong>Ctrl+A</strong> (Windows) to select everything on this page.</li>
+    <li>Press <strong>Cmd+C</strong> to copy.</li>
+    <li>Open a new <strong>Google Doc</strong> and press <strong>Cmd+V</strong> to paste.</li>
+    <li>Delete this yellow box from the Google Doc.</li>
+    <li>Go to <strong>File → Share → Anyone with the link → Viewer</strong>.</li>
+    <li>To use as a template: anyone opens the link and goes <strong>File → Make a Copy</strong>.</li>
+  </ol>
+</div>
+
+<!-- COVER -->
+<div style="background:#14213D; color:#fff; padding:32px 32px 24px; margin:0 0 32px 0;">
+  <h1 style="font-size:22pt; font-weight:bold; color:#fff; border-bottom:3px solid #E2603D; padding-bottom:8px; margin:0 0 8px 0;">Student Deep Dive — [STUDENT FULL NAME]</h1>
+  <div style="color:rgba(246,242,233,0.75); font-size:11pt;">[Subject] · [Weekly Performance Analysis / Year to Date / Month to Date]</div>
+  <div style="margin-top:16px; font-size:9.5pt; color:rgba(246,242,233,0.55);">[student.email@alpha.school] &nbsp;·&nbsp; Analysis Date: [Month Year] &nbsp;·&nbsp; Prepared by: Campus DRI</div>
+</div>
+
+<!-- AT A GLANCE -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 14px 0;">At a Glance</h1>
+
+<table style="width:100%; border-collapse:collapse; margin:0 0 16px 0; font-size:10.5pt;">
+  <tr>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:40%;">Metric</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:30%;">Result</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D;">Status</th>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">Total XP for the Week</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. 130 XP]</td>
+    <!-- Status options: Met Target (green) / Concern (yellow) / Critical (red) -->
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; color:#2B6F6C; font-weight:bold;">Met Target</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">Total Minutes Spent for the Week</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[e.g. 249 min]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9; color:#2B6F6C; font-weight:bold;">Met Target</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">XP / Time Efficiency</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. 52%]</td>
+    <!-- &gt;80% = Met Target · 60–80% = Concern · &lt;60% = Critical -->
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; color:#e0a800; font-weight:bold;">Concern</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">Overall Weekly Assessment</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9; color:#E2603D; font-weight:bold;" colspan="2">[e.g. Significant Anti-Pattern Activity Detected]</td>
+  </tr>
+</table>
+
+<!-- Context callout -->
+<div style="background:#fffbea; border-left:4px solid #e0a800; padding:12px 16px; margin:0 0 24px 0; font-size:10pt;">
+  <strong>Important context:</strong> [Explain the headline number — e.g. "While [STUDENT] met both targets this week, efficiency is low at [X]%. This means a significant portion of time was wasted due to anti-patterns rather than productive learning."]
+</div>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+<!-- ANTI-PATTERNS -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 10px 0;">Anti-Patterns Identified</h1>
+<p style="margin:0 0 12px 0; font-size:10.5pt;">The following recurring behavioral patterns were observed this week and are impacting both learning quality and time efficiency.</p>
+
+<!-- Copy and paste these blocks to add more anti-patterns -->
+<div style="background:#fdf1ed; border-left:4px solid #E2603D; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>1. [Anti-pattern title — e.g. Not staying focused on instructional content]</strong><br>
+  [One or two sentences describing what was observed and its impact on learning.]
+</div>
+
+<div style="background:#fdf1ed; border-left:4px solid #E2603D; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>2. [Anti-pattern title]</strong><br>
+  [Description of the anti-pattern and its impact.]
+</div>
+
+<div style="background:#fdf1ed; border-left:4px solid #E2603D; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>3. [Anti-pattern title]</strong><br>
+  [Description of the anti-pattern and its impact.]
+</div>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+<!-- OBSERVATIONS -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 10px 0;">Detailed Observations</h1>
+<p style="margin:0 0 12px 0; font-size:10.5pt;">The following were documented with recording evidence this week.</p>
+
+<h2 style="font-size:12pt; font-weight:bold; color:#2B6F6C; margin:20px 0 6px 0; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #2B6F6C; padding-left:10px;">Focus &amp; Attention</h2>
+<ul style="margin:6px 0 12px 0; padding-left:22px; font-size:10.5pt;">
+  <li style="margin-bottom:5px;">[Observation with evidence ref — e.g. "Did not stay focused on instructional content, leading to repeated errors." <em>(Evidence: 1, 2, 3)</em>]</li>
+  <li style="margin-bottom:5px;">[Add more observations here.]</li>
+</ul>
+
+<h2 style="font-size:12pt; font-weight:bold; color:#2B6F6C; margin:20px 0 6px 0; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #2B6F6C; padding-left:10px;">Video &amp; Instructional Engagement</h2>
+<ul style="margin:6px 0 12px 0; padding-left:22px; font-size:10.5pt;">
+  <li style="margin-bottom:5px;">[e.g. "Skipped through instructional videos instead of watching them fully." <em>(Evidence: 1, 2)</em>]</li>
+</ul>
+
+<h2 style="font-size:12pt; font-weight:bold; color:#2B6F6C; margin:20px 0 6px 0; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #2B6F6C; padding-left:10px;">Question Attempts &amp; Accuracy</h2>
+<ul style="margin:6px 0 12px 0; padding-left:22px; font-size:10.5pt;">
+  <li style="margin-bottom:5px;">[e.g. "Rushed through questions without double-checking before submitting." <em>(Evidence: 1–9)</em>]</li>
+</ul>
+
+<h2 style="font-size:12pt; font-weight:bold; color:#2B6F6C; margin:20px 0 6px 0; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #2B6F6C; padding-left:10px;">App Behaviour</h2>
+<ul style="margin:6px 0 12px 0; padding-left:22px; font-size:10.5pt;">
+  <li style="margin-bottom:5px;">[e.g. "Repeatedly closed the app before finishing lessons." <em>(Evidence: 1, 2)</em>]</li>
+</ul>
+
+<!-- Optional note callout -->
+<div style="background:#fdf1ed; border-left:4px solid #E2603D; padding:12px 16px; margin:0 0 8px 0; font-size:10pt;">
+  <strong>Note:</strong> [Optional — add any important context or caveat about how to interpret the data.]
+</div>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+<!-- ROOT CAUSE -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 14px 0;">Root Cause Assessment</h1>
+
+<table style="width:100%; border-collapse:collapse; margin:0 0 16px 0; font-size:10.5pt;">
+  <tr>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:22%;">Area</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:39%;">Observed Issue</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D;">Likely Root Cause</th>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. Focus]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. Frequent off-task behaviour]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. Motivation — guide intervention needed]</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[Area]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[Observed issue]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[Root cause]</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[Area]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[Observed issue]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[Root cause]</td>
+  </tr>
+</table>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+<!-- COACHING -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 10px 0;">Coaching Recommendations for [STUDENT FIRST NAME]</h1>
+<p style="margin:0 0 12px 0; font-size:10.5pt;">The following coaching points should be delivered to [STUDENT FIRST NAME] directly by their guide this week.</p>
+
+<!-- Copy and paste these blocks to add more coaching points -->
+<div style="background:#e8f4f3; border-left:4px solid #2B6F6C; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>1. [Coaching point title — matches Anti-Pattern 1]</strong><br>
+  [Write in direct, student-facing language. What should the student do differently, and why will it help them? Keep it encouraging and specific.]
+</div>
+
+<div style="background:#e8f4f3; border-left:4px solid #2B6F6C; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>2. [Coaching point title — matches Anti-Pattern 2]</strong><br>
+  [Student-facing. Specific, actionable, encouraging.]
+</div>
+
+<div style="background:#e8f4f3; border-left:4px solid #2B6F6C; padding:10px 14px; margin:8px 0; font-size:10pt;">
+  <strong>3. [Coaching point title — matches Anti-Pattern 3]</strong><br>
+  [Student-facing. Specific, actionable, encouraging.]
+</div>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:24px 0;">
+
+<!-- ACTION PLAN -->
+<h1 style="font-size:18pt; font-weight:bold; color:#14213D; border-bottom:3px solid #E2603D; padding-bottom:6px; margin:0 0 14px 0;">Action Plan</h1>
+
+<table style="width:100%; border-collapse:collapse; margin:0 0 16px 0; font-size:10.5pt;">
+  <tr>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:22%;">Who</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D;">Action</th>
+    <th style="background-color:#14213D; color:#fff; padding:9px 14px; text-align:left; border:1px solid #14213D; width:22%;">By When</th>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;"><strong>Guide</strong></td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. Deliver coaching points 1–3 to [STUDENT] directly.]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">This week</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;"><strong>Guide</strong></td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[e.g. Observe [STUDENT] during at least one learning session.]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">This week</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;"><strong>Campus DRI</strong></td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">[e.g. Review next week's recordings for the same anti-patterns. If 3+ persist, escalate.]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top;">End of next week</td>
+  </tr>
+  <tr>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;"><strong>Campus DRI</strong></td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">[e.g. Track XP efficiency — target above 65% to confirm improvement.]</td>
+    <td style="padding:9px 14px; border:1px solid #ddd; vertical-align:top; background-color:#f6f2e9;">End of next week</td>
+  </tr>
+</table>
+
+<!-- Follow-up trigger -->
+<div style="background:#e8f4f3; border-left:4px solid #2B6F6C; padding:12px 16px; margin:0 0 8px 0; font-size:10pt;">
+  <strong>Follow-up trigger:</strong> If [STUDENT]'s [metric] remains below [threshold] next week, or if [condition], escalate to the Subject DRI and flag in the weekly report.
+</div>
+
+</body>
+</html>
